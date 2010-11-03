@@ -1,4 +1,4 @@
-#labels Featured
+#labels Featursed
 #介绍如数家珍的特色功能
 
 ==多线程设计==
