@@ -1,0 +1,17 @@
+#感觉无从下手么，这里来看看
+
+=搜索范例=
+  * 名称包含my的mp3文件
+my .mp3
+  * Classic目录下的音乐
+\classic mt:audio
+  * 全部视频和音频文件
+mt:video|audio
+  * 昨天下载到down文件夹的txt小说
+.txt \down :1d
+  * 超过100M的非视频文件
+>100m !mt:video
+  * 一个月之前的旧照片
+/dcim mt:image !:1m
+  * 银行19位数字帐号命名的txt文件
+re:^\d{19}\.txt$
