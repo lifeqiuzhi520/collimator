@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Display">
+        <CheckBoxPreference
+            android:key="display_thumbnail"
+            android:title="Show thumbnails"
+            android:summaryOn="Try load thumbnails and covers"
+            android:summaryOff="Only show icons for extension"
+            android:defaultValue="true"
+        />
+        <CheckBoxPreference
+            android:key="display_digest"
+            android:title="Show digests"
+            android:summaryOn="Try load text previews and metadata"
+            android:summaryOff="Only show base information"
+            android:defaultValue="true"
+        />
+        <CheckBoxPreference
+            android:key="display_instant"
+            android:title="Refresh instantly"
+            android:summaryOn="Refresh after each loading"
+            android:summaryOff="Refresh after loading completed"
+            android:defaultValue="false"
+        />
+        <CheckBoxPreference
+            android:key="display_statusbar"
+            android:title="Show statusbar"
+            android:summaryOn="Statusbar provides some hints"
+            android:summaryOff="Hide statusbar to provides more space"
+            android:defaultValue="true"
+        />
+        <ListPreference
+        	android:key="display_layout"
+        	android:title="Display layout"
+        	android:summary="Choose layout for results"
+        	android:entries="@array/dialog_layout_entries"
+        	android:entryValues="@array/dialog_layout_entriesvalue"
+        	android:defaultValue="0"
+       	/>
+        <CheckBoxPreference
+            android:key="display_firstlaunch"
+            android:title="Show first launch screen"
+            android:summaryOn="Show first launch screen when next start"
+            android:summaryOff="Skip the first launch screen"
+            android:defaultValue="true"
+        />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Operations">
+        <CheckBoxPreference
+            android:key="operation_tap"
+            android:title="Tap to view"
+            android:summaryOn="Tap on selected item to view"
+            android:summaryOff="No operation when tapping on selected"
+            android:defaultValue="true"
+        />
+        <CheckBoxPreference
+            android:key="operation_delete"
+            android:title="Enable delete"
+            android:summaryOn="Delete oparation can be performed!"
+            android:summaryOff="Delete operation is prevented"
+            android:defaultValue="false"
+        />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Global search">
+        <CheckBoxPreference
+            android:key="global_makeshortcut"
+            android:title="Store recent search"
+            android:summaryOn="Recent search can be recalled"
+            android:summaryOff="Prevent storing recent search"
+            android:defaultValue="true"
+        />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Searching">
+        <CheckBoxPreference
+            android:key="matching_fuzzy"
+            android:title="Fuzzy matching"
+            android:summaryOn="Match occurrence anywhere"
+            android:summaryOff="Only match from beginning"
+            android:defaultValue="true"
+        />
+        <CheckBoxPreference
+            android:key="matching_regex"
+            android:title="Regular expression"
+            android:summaryOn="Consider key entered as regex"
+            android:summaryOff="Using ? and * as wildcard"
+            android:defaultValue="false"
+        />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Indexing(Reload needed)">
+        <CheckBoxPreference
+            android:key="index_without_prompt"
+            android:title="Auto reload"
+            android:summaryOn="Skip confirmation before reloading"
+            android:summaryOff="Confirm before reloading"
+            android:defaultValue="false"
+        />
+        <CheckBoxPreference
+            android:key="index_firstletter"
+            android:title="Index initial alphabet"
+            android:summaryOn="Enable searching by initial alphabet"
+            android:summaryOff="Disable searching by initial alphabet"
+            android:defaultValue="true"
+        />
+        <CheckBoxPreference
+            android:key="index_system"
+            android:title="Index system folders"
+            android:summaryOn="Including system folders"
+            android:summaryOff="Ignore system folders"
+            android:defaultValue="false"
+        />
+        <CheckBoxPreference
+            android:key="index_dotprefix"
+            android:title="Index dot-prefixed files"
+            android:summaryOn="Including dot-prefixed files"
+            android:summaryOff="Ignore dot-prefixed files"
+            android:defaultValue="false"
+        />
+        <CheckBoxPreference
+            android:key="index_hidden"
+            android:title="Index hidden files"
+            android:summaryOn="Including hidden files"
+            android:summaryOff="Ignore hidden files"
+            android:defaultValue="false"
+        />
+	</PreferenceCategory>
+</PreferenceScreen>
