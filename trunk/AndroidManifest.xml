@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.toraleap.collimator"
+      android:versionCode="5"
+      android:versionName="1.0.4">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".SearchActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/Theme.SearchActivity.Wallpaper"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHROTCUT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="collimator" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter> 
+				<action android:name="android.intent.action.SEARCH" /> 
+				<category android:name="android.intent.category.DEFAULT" /> 
+			</intent-filter> 
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.OPENABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter> -->
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+                <category android:name="android.intent.category.OPENABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+			<meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+        </activity>
+        
+		<activity android:name=".PrefsActivity"
+                  android:label="@string/dialog_preferences_title">
+        </activity>
+	
+		<activity android:name=".HelpActivity"
+                  android:label="@string/dialog_help_title">
+        </activity>
+	
+		<activity android:name=".ShortcutActivity"
+                  android:label="@string/dialog_shortcut_title"
+                  android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+		</activity>
+        
+		<provider android:name=".ext.GlobalProvider"
+		       android:authorities="collimator"
+		       android:syncable="false">
+	        <path-permission android:pathPrefix="/search_suggest_query"
+                   android:readPermission="android.permission.GLOBAL_SEARCH" />
+       	</provider>
+	</application>
+	
+    <uses-sdk android:minSdkVersion="7" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"></uses-permission>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+</manifest> 

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="dialog_filter_range_entries">
+	<item>全部</item>
+	<item>圖片</item>
+	<item>音樂</item>
+	<item>視頻</item>
+	<item>文檔</item>
+	<item>應用</item>
+	<item>已知類型</item>
+</string-array>
+<string-array name="dialog_filter_range_entriesvalue">
+	<item></item>
+	<item>mt:image</item>
+	<item>mt:audio</item>
+	<item>mt:video</item>
+	<item>mt:text|msword|ms-excel|ms-powerpoint</item>
+	<item>mt:package-archive</item>
+	<item>mt:re:.{4,}</item>
+</string-array>
+<string-array name="dialog_openas_entries">
+	<item>查看</item>
+	<item>編輯</item>
+	<item>打開方式</item>
+	<item>發送到</item>
+	<item>刪除</item>
+</string-array>
+<string-array name="dialog_result_entries">
+	<item>結果統計</item>
+	<item>排序方式</item>
+	<item>快捷搜索</item>
+	<item>播放列表</item>
+	<item>批量刪除</item>
+</string-array>
+<string-array name="dialog_pick_entries">
+	<item>結果統計</item>
+	<item>排序方式</item>
+</string-array>
+<string-array name="dialog_sort_entries">
+	<item>文件名稱</item>
+	<item>修改日期</item>
+	<item>文件類型</item>
+	<item>文件大小</item>
+	<item>文件路徑</item>
+	<item>文件擴展名</item>
+	<item>文件首字母</item>
+	<item>路徑首字母</item>
+	<item>不進行排序</item>
+</string-array>
+<string-array name="dialog_layout_entries">
+	<item>平鋪</item>
+	<item>圖標</item>
+	<item>摘要</item>
+</string-array>
+<string-array name="dialog_layout_entriesvalue">
+	<item>0</item>
+	<item>1</item>
+	<item>2</item>
+</string-array>
+</resources>

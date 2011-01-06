@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">如數家珍</string>
+	<string name="search_edit_hint">鍵入即搜索</string>
+	<string name="search_label">如數家珍</string>
+	<string name="search_description">快速高效的本地文件搜索引擎</string>
+	<string name="search_title">本地文件搜索</string>
+	<string name="search_hint_format">如數家珍 搜索 "%s"</string>
+	    
+	<string name="status_default">載入索引中，請稍後...</string>
+	<string name="status_error_preferences">載入首選項時出現錯誤。</string>
+	<string name="status_nosdcard">沒有檢測到SD卡，無法進行操作。</string>
+	<string name="status_match_nodata">索引未初始化或為空。</string>
+	<string name="status_match_start">正在為您搜索，請等待...</string>
+	<string name="status_match_syntax_error">等待完整的輸入表達式...</string>
+	<string name="status_result_format">搜索完成，找到 %d 個對象，耗時 %s。</string>
+	<string name="status_reload_message">正在刷新文件索引，請稍候...</string>
+	<string name="status_reload_start">正在建立索引...</string>
+	<string name="status_reload_result_format">索引創建於 %s，%d 項。</string>
+	<string name="status_reload_failed">建立索引失敗。</string>
+	<string name="status_serializing_failed">保存索引到SD卡失敗。</string>
+	<string name="status_deserializing_failed">索引未初始化或出錯，請手動刷新。</string>
+	<string name="status_deserializing_different_version">索引數據庫不適合當前版本，請刷新。</string>
+	<string name="status_pick_image">請選擇一個圖片文件</string>
+	<string name="status_pick_audio">請選擇一個音樂文件</string>
+	<string name="status_pick_video">請選擇一個視頻文件</string>
+	<string name="status_pick_file">請選擇一個文件</string>
+	<string name="status_range_locked">搜索範圍已鎖定</string>
+	
+	<string name="util_fileinfo_milliseconds">%d 毫秒</string>
+	<string name="util_fileinfo_seconds">%d 秒</string>
+	<string name="util_fileinfo_minutes">%d 分</string>
+	<string name="util_fileinfo_hours">%d 小時</string>
+	<string name="util_fileinfo_days">%d 天</string>
+	<string name="util_fileinfo_months">%d 月</string>
+	<string name="util_fileinfo_years">%d 年</string>
+	<string name="util_fileinfo_ago">%s前</string>
+	<string name="util_fileinfo_hence">%s後</string>
+	<string name="util_digest_none">沒有摘要信息</string>
+	<string name="util_digest_loading">正在獲取摘要...</string>
+	<string name="util_digest_charset">BIG5</string>
+	<string name="util_digest_nulldata">未知</string>
+	<string name="util_digest_audio_format"><![CDATA[標題: %s<br>藝術家: %s<br>專輯: %s<br>長度: %s]]></string>
+	<string name="util_digest_video_format"><![CDATA[視頻尺寸: %s x %s<br>視頻長度: %s]]></string>
+	<string name="util_digest_image_format"><![CDATA[尺寸: %s x %s<br>相機型號: %s<br>拍攝時間: %s]]></string>
+	<string name="util_digest_archive_format"><![CDATA[總計文件: %s 個<br>解包大小: %s%s]]></string>
+	<string name="util_digest_apk_format"><![CDATA[名稱: %s<br>版本: %s<br>全名: %s]]></string>
+	
+	<string name="menu_result">搜索結果</string>
+	<string name="menu_range">搜索範圍</string>
+	<string name="menu_sort">排序方式</string>
+	<string name="menu_layout">顯示佈局</string>
+	<string name="menu_reload">重建索引</string>
+	<string name="menu_preferences">首選項</string>
+	<string name="menu_help">幫助</string>
+	
+	<string name="dialog_index_obsolete_title">需要重建索引</string>
+	<string name="dialog_index_obsolete_message">索引數據庫可能已過期。為了得到正確的搜索結果，建議點擊確定立即重建索引，或以後從菜單中選擇重建索引。</string>
+	    
+	<string name="dialog_openas_title">選擇操作</string>
+	<string name="dialog_openas_unavailable">無法找到與此操作相關聯的應用。</string>
+	<string name="dialog_openas_choose">選擇執行操作的應用程序</string>
+	<string name="dialog_openas_delete_title">刪除文件確認</string>
+	<string name="dialog_openas_delete_format">您確認要刪除此文件嗎？\n\n%s</string>
+	<string name="dialog_openas_delete_success">文件已刪除</string>
+	<string name="dialog_openas_delete_failed">文件刪除失敗</string>
+	
+	<string name="dialog_result_title">處理搜索結果</string>
+	<string name="dialog_pick_title">文件選取模式</string>
+	
+	<string name="dialog_statistics_title">結果統計</string>
+	<string name="dialog_statistics_message_format">文件總數: %d\n佔用空間: %s\n文件來源: %d 個文件夾\n\n%s</string>
+	<string name="dialog_statistics_index_details">索引條目共 %d 項，更新於 %s。</string>
+	<string name="dialog_statistics_index_none">尚未建立索引或讀取失敗。</string>
+	
+	<string name="dialog_result_delete_title">批量刪除文件確認</string>
+	<string name="dialog_result_delete_format">您正試圖刪除%d個文件。\n\n警告！批量刪除文件是一項非常危險的操作，請仔細確認搜索結果中的每一項目，方可點擊繼續，否則請取消操作！</string>
+	<string name="dialog_result_delete_message_format">成功刪除 %d 個文件</string>
+	<string name="dialog_result_delete_forbidden">刪除操作已被禁止。若確實需要執行刪除操作，請在首選項裡啟用此設置，並自行負擔誤刪文件可能造成的一切後果。</string>
+	<string name="dialog_delete_button_ok">確認刪除!</string>
+	    
+	<string name="dialog_playlist_title">創建播放列表</string>
+	<string name="dialog_playlist_message">輸入要創建的播放列表名稱。若同名播放列表已存在，將會替換原有列表。留空將創建缺省播放列表。</string>
+	<string name="dialog_playlist_default">缺省列表。</string>
+	<string name="dialog_playlist_inserted_format">%d 個條目已加入到"%s"</string>
+	
+	<string name="dialog_shortcut_title">桌面快捷方式</string>
+	<string name="dialog_shortcut_message">請輸入桌面快捷方式的名稱。</string>
+	<string name="dialog_shortcut_edit_hint">顯示的名稱</string>
+	<string name="dialog_shortcut_edit_noname">必須輸入顯示名稱</string>
+	
+	<string name="dialog_sort_title">排序方式</string>
+	<string name="dialog_sort_ascend">升序</string>
+	<string name="dialog_sort_descend">降序</string>
+	
+	<string name="dialog_filter_range_title">搜索範圍</string>
+	<string name="dialog_filter_refer_title">篩選</string>
+	
+	<string name="dialog_layout_title">顯示佈局</string>
+	
+	<string name="dialog_preferences_title">如數家珍首選項</string>
+	
+	<string name="dialog_help_title">如數家珍幫助</string>
+	<string name="dialog_help_file">help-zh-rTW.html</string>
+	    
+	<string name="dialog_first_launch_title">歡迎使用如數家珍</string>
+	<string name="dialog_first_launch_introduction">　　極致的搜索速度、快捷的操作方式以及強大的處理功能——如數家珍就是集以上特點於一身的本地搜索軟件。\n　　以下說明了簡要的操作步驟，您可能需要滾動屏幕以查看完整的說明。</string>
+	<string name="dialog_first_launch_note1">點按選擇搜索範圍</string>
+	<string name="dialog_first_launch_note2">輸入搜索關鍵詞</string>
+	<string name="dialog_first_launch_note3">顯示當前狀態，對結果進行操作</string>
+	<string name="dialog_first_launch_note4">顯示搜索結果，短按選擇，再次短按查看文件，長按彈出可用操作列表</string>
+	<string name="dialog_first_launch_note5">顯示操作提示，點按可彈出系統菜單</string>
+	<string name="dialog_first_launch_note6">更多信息詳見菜單→幫助，狀態圖例:</string>
+	<string name="dialog_first_launch_status_reloading">正在載入索引</string>
+	<string name="dialog_first_launch_status_progressing">搜索進行中</string>
+	<string name="dialog_first_launch_status_star_empty">搜索完成，沒有結果</string>
+	<string name="dialog_first_launch_status_star_half">有少量搜索結果</string>
+	<string name="dialog_first_launch_status_star_full">有大量搜索結果</string>
+	<string name="dialog_first_launch_status_pick">文件選取模式</string>
+	<string name="dialog_first_launch_status_warning">索引未準備好或已過時</string>
+	
+	<string name="dialog_ok">確定</string>
+	<string name="dialog_cancel">取消</string>
+	<string name="dialog_skip">不再顯示</string>
+    
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="dialog_filter_range_entries">
+    <item>All</item>
+    <item>Images</item>
+    <item>Sounds</item>
+    <item>Videos</item>
+    <item>Docs</item>
+    <item>Apps</item>
+    <item>Known</item>
+</string-array>
+<string-array name="dialog_filter_range_entriesvalue">
+    <item></item>
+    <item>mt:image</item>
+    <item>mt:audio</item>
+    <item>mt:video</item>
+    <item>mt:text|msword|ms-excel|ms-powerpoint</item>
+    <item>mt:package-archive</item>
+    <item>mt:re:.{4,}</item>
+</string-array>
+<string-array name="dialog_openas_entries">
+    <item>View</item>
+    <item>Edit</item>
+    <item>Open as</item>
+    <item>Send</item>
+    <item>Delete</item>
+</string-array>
+<string-array name="dialog_result_entries">
+    <item>Statistics</item>
+    <item>Sort</item>
+    <item>Shortcut</item>
+    <item>Playlist</item>
+    <item>Batch delete</item>
+</string-array>
+<string-array name="dialog_pick_entries">
+    <item>Statistics</item>
+    <item>Sort</item>
+</string-array>
+<string-array name="dialog_sort_entries">
+    <item>Name</item>
+    <item>Last modified</item>
+    <item>MIME-Type</item>
+    <item>Size</item>
+    <item>Path</item>
+    <item>Extension</item>
+    <item>Filename alphabet</item>
+    <item>Path alphabet</item>
+    <item>None</item>
+</string-array>
+<string-array name="dialog_layout_entries">
+    <item>Tile</item>
+    <item>Icon</item>
+    <item>Digest</item>
+</string-array>
+<string-array name="dialog_layout_entriesvalue">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+</string-array>
+</resources>

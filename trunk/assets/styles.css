@@ -1,0 +1,52 @@
+body {
+	font-family: Constantia, Georgia, "Times New Roman", serif;
+	font-size: 100%;
+	margin: 0.5em;
+}
+
+#version {
+	border-bottom: 1px dotted #D6D6D6;
+    display: block;
+    float: right;
+    font-size: 100%;
+    text-align: right;
+}
+
+dl.content>dt {
+	padding: 0.2em;
+	font-size: 125%;
+	color: #000099;
+	background-color: #EEEEEE;
+	border: #E6E6E6 1px solid;
+	border-left: 4px solid #669900;
+	border-bottom: #DBDBDB 1px solid;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+}
+
+dl.content>dd {
+  margin-left: 1.5em;
+	margin-top:0.3em;
+}
+
+dl.innercontent>dt {
+	border-bottom: 1px dotted #D6D6D6;
+	color: #334466;
+	font-style: bold;
+	margin-top:0.3em;
+}
+
+dl.innercontent>dd {
+  margin-left: 1.5em;
+	margin-top:0.3em;
+}
+
+dl.innercontent em {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.gototop {
+  font-size: 75%;
+	text-align: right;
+}

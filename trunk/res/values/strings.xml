@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Collimator</string>
+    <string name="search_edit_hint">Enter to search</string>
+    <string name="search_label">Collimator</string>
+    <string name="search_description">Fast and effective local search engine</string>
+    <string name="search_title">Local files</string>
+    <string name="search_hint_format">Search "%s" using Collimator</string>
+    
+    <string name="status_default">Loading index, please wait...</string>
+    <string name="status_error_preferences">Error while loading preferences.</string>
+    <string name="status_nosdcard">No SDCard was detected.</string>
+    <string name="status_match_nodata">Uninitilized index or empty.</string>
+    <string name="status_match_start">Searching...</string>
+    <string name="status_match_syntax_error">Continue entering...</string>
+    <string name="status_result_format">Completed. %d file(s) found, %s cost.</string>
+    <string name="status_reload_message">Reloading index, please wait...</string>
+    <string name="status_reload_start">Reloading index...</string>
+    <string name="status_reload_result_format">Index created at %s, %d files included.</string>
+    <string name="status_reload_failed">Failed reloading index.</string>
+    <string name="status_serializing_failed">Failed saving index database.</string>
+    <string name="status_deserializing_failed">Failed restore index database.</string>
+    <string name="status_deserializing_different_version">Failed restore index due to different version.</string>
+    <string name="status_pick_image">Choose an image file</string>
+    <string name="status_pick_audio">Choose an audio file</string>
+    <string name="status_pick_video">Choose a video file</string>
+    <string name="status_pick_file">Choose a file</string>
+    <string name="status_range_locked">Search range locked</string>
+
+    <string name="util_fileinfo_milliseconds">%d ms</string>
+    <string name="util_fileinfo_seconds">%d secs</string>
+    <string name="util_fileinfo_minutes">%d mins</string>
+    <string name="util_fileinfo_hours">%d hrs</string>
+    <string name="util_fileinfo_days">%d days</string>
+    <string name="util_fileinfo_months">%d mos</string>
+    <string name="util_fileinfo_years">%d yrs</string>
+    <string name="util_fileinfo_ago">%s ago</string>
+    <string name="util_fileinfo_hence">%s hence</string>
+    <string name="util_digest_none">No more information</string>
+    <string name="util_digest_loading">Requiring digest...</string>
+    <string name="util_digest_charset">UTF-8</string>
+    <string name="util_digest_nulldata">unknown</string>
+    <string name="util_digest_audio_format"><![CDATA[Title: %s<br>Artist: %s<br>Album: %s<br>Duration: %s]]></string>
+    <string name="util_digest_video_format"><![CDATA[Size: %s x %s<br>Duration: %s]]></string>
+    <string name="util_digest_image_format"><![CDATA[Size: %s x %s<br>Model: %s<br>Time: %s]]></string>
+    <string name="util_digest_archive_format"><![CDATA[Files: %s<br>Uncompressed size: %s%s]]></string>
+    <string name="util_digest_apk_format"><![CDATA[Name: %s<br>Version: %s<br>Package: %s]]></string>
+
+    <string name="menu_result">Result</string>
+    <string name="menu_range">Range</string>
+    <string name="menu_sort">Sort</string>
+    <string name="menu_layout">Layout</string>
+    <string name="menu_reload">Reload</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_help">Help</string>
+
+    <string name="dialog_index_obsolete_title">Reload index</string>
+    <string name="dialog_index_obsolete_message">Index database may be obsolete. To ensure correct results, we recommend reload index immediately. You can also choose "reload" in the menu.</string>
+    
+    <string name="dialog_openas_title">Open as</string>
+    <string name="dialog_openas_unavailable">No related application for this operation.</string>
+    <string name="dialog_openas_choose">Choose an application</string>
+    <string name="dialog_openas_delete_title">Confirm delete</string>
+    <string name="dialog_openas_delete_format">Are you sure to delete\n\n%s</string>
+    <string name="dialog_openas_delete_success">File deleted</string>
+    <string name="dialog_openas_delete_failed">Failed to delete</string>
+
+    <string name="dialog_result_title">Handle result</string>
+
+    <string name="dialog_statistics_title">Statistics</string>
+    <string name="dialog_statistics_message_format">Count: %d\nSpace: %s\nSource: %d folder(s)\n\n%s</string>
+    <string name="dialog_statistics_index_details">Total indexed %d items, reloaded at %s。</string>
+    <string name="dialog_statistics_index_none">No index database.</string>
+
+    <string name="dialog_result_delete_title">Confirm batch delete</string>
+    <string name="dialog_result_delete_format">You are deleting %d files.\n\nWarning! Batch delete is a dangerous operation, don\'t proceed until you review all results!</string>
+    <string name="dialog_result_delete_message_format">%d files deleted</string>
+    <string name="dialog_result_delete_forbidden">Delete prevented. If you enable delete in preferences, you must undertake all potential damage in delete operation.</string>
+    <string name="dialog_delete_button_ok">Confirm delete!</string>
+    
+    <string name="dialog_playlist_title">Create playlist</string>
+    <string name="dialog_playlist_message">Enter name of the new playlist, or replace the one with the same name. Remaining empty to create the default list.</string>
+    <string name="dialog_playlist_default">DefaultList</string>
+    <string name="dialog_playlist_inserted_format">%d items inserted to "%s"</string>
+
+    <string name="dialog_shortcut_title">Make shortcut</string>
+    <string name="dialog_shortcut_message">Determine the name to display on Home Screen.</string>
+    <string name="dialog_shortcut_edit_hint">Name for display</string>
+    <string name="dialog_shortcut_edit_noname">Must enter a name</string>
+
+    <string name="dialog_sort_title">Sort mode</string>
+    <string name="dialog_sort_ascend">Ascend</string>
+    <string name="dialog_sort_descend">Descend</string>
+
+    <string name="dialog_filter_range_title">Search range</string>
+    <string name="dialog_filter_refer_title">Filter</string>
+
+    <string name="dialog_layout_title">Display layout</string>
+
+    <string name="dialog_preferences_title">Collimator preferences</string>
+
+    <string name="dialog_help_title">Collimator help</string>
+    <string name="dialog_help_file">help-en.html</string>
+    
+    <string name="dialog_first_launch_title">Welcome to Collimator</string>
+    <string name="dialog_first_launch_introduction">Collimator is a fast convenient application to search local files.\nHere are the simple steps, and scroll screen may be needed to view full instruction.</string>
+    <string name="dialog_first_launch_note1">Choose search range here</string>
+    <string name="dialog_first_launch_note2">Enter search keywords here</string>
+    <string name="dialog_first_launch_note3">Show status, and perform operations</string>
+    <string name="dialog_first_launch_note4">Show result, tap to select, tap again to view, and long press for operation list</string>
+    <string name="dialog_first_launch_note5">Show hints, and tap to popup menu</string>
+    <string name="dialog_first_launch_note6">More info in help. Status legend:</string>
+    <string name="dialog_first_launch_status_reloading">Reloading</string>
+    <string name="dialog_first_launch_status_progressing">Searching</string>
+    <string name="dialog_first_launch_status_star_empty">Search completed with no results</string>
+    <string name="dialog_first_launch_status_star_half">Search completed with a few results</string>
+    <string name="dialog_first_launch_status_star_full">Search completed with many results</string>
+    <string name="dialog_first_launch_status_pick">File picker mode</string>
+    <string name="dialog_first_launch_status_warning">Obsolete index or not ready</string>
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_skip">Don\'t show again</string>
+    
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:orientation="vertical"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	>
+		
+	<RelativeLayout
+		android:id="@+id/SearchPanel"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+       	android:background="@drawable/search_plate"
+		>
+			
+		<ImageButton 
+			android:id="@+id/ButtonStar" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerInParent="true"
+            android:src="@drawable/button_reloading"
+            android:background="@drawable/floating_dialog_indicator_bg"
+			/>
+    
+		<EditText 
+			android:hint="@string/search_edit_hint" 
+			android:id="@+id/EditSearch" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:layout_weight="1"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="4dp"
+			android:layout_marginBottom="4dp"
+			android:layout_toLeftOf="@+id/ButtonStar"
+			android:layout_centerInParent="true"
+			android:paddingLeft="34dp"
+            android:gravity="center_vertical|left"
+            android:background="@drawable/search_selector_bg"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/primary_text_light"
+			/>
+			
+		<ImageButton
+		    android:id="@+id/ButtonRange"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_alignTop="@+id/EditSearch"
+		    android:layout_alignBottom="@+id/EditSearch"
+  			android:layout_alignLeft="@+id/EditSearch"
+		    android:layout_centerInParent="true"
+			android:paddingLeft="6dp"
+  			android:src="@drawable/button_search_all"
+  			android:background="@android:color/transparent"
+			/>
+	</RelativeLayout>
+
+	<GridView 
+		android:id="@+id/ListEntries" 
+		android:fastScrollEnabled="true" 
+		android:choiceMode="singleChoice"
+		android:clickable="true"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:layout_weight="1"
+        android:listSelector="@android:color/transparent"
+		/>
+	
+	<TextView 
+		android:text="@string/status_default" 
+		android:id="@+id/TextStatus" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:paddingLeft="6sp"
+       	android:background="@drawable/search_status_default"
+        android:gravity="center_vertical|left"
+		android:textColor="#FFFFFFFF"
+		android:shadowColor="#C0000000"
+		android:shadowDx="0"
+		android:shadowDy="0"
+		android:shadowRadius="3.0"
+		/>
+</LinearLayout>
