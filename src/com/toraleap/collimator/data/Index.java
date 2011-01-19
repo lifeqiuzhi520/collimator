@@ -191,7 +191,7 @@ public final class Index {
 	 */
 	private static void sendHandlerMessage(int what, int arg1, int arg2, Object obj) {
 		if (null != sEventHandler) {
-			Message msg = new Message();
+			Message msg = Message.obtain();
 			msg.what = what;
 			msg.arg1 = arg1;
 			msg.arg2 = arg2;

@@ -161,7 +161,7 @@ public abstract class SoftCache<K, V> {
 	 */
 	private void sendHandlerMessage(int what, int arg1, int arg2, Object obj) {
 		if (null != callback) {
-			Message msg = new Message();
+			Message msg = Message.obtain();
 			msg.what = what;
 			msg.arg1 = arg1;
 			msg.arg2 = arg2;
