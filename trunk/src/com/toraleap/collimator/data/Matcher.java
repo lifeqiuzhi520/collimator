@@ -248,7 +248,7 @@ public final class Matcher {
 		for (Matcher matcher : matchers) {
 			if (matcher.type() == Matcher.MATCHER_TYPE_NAME && matcher.isReverse == false) match.setHilite(matcher.start(), matcher.end());
 		}
-		Message msg = new Message();
+		Message msg = Message.obtain();
 		msg.what = MATCHER_ENTRY;
 		msg.obj = match;
 		sHandler.sendMessage(msg);
