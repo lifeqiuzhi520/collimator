@@ -16,6 +16,7 @@ import android.os.Environment;
 import android.os.StatFs;
 
 import com.toraleap.collimator.data.IndexData.DifferentVersionException;
+import com.toraleap.collimator.util.FileInfo;
 import com.toraleap.collimator.util.Unicode2Alpha;
 
 /**
@@ -30,6 +31,7 @@ final class IndexLoader {
 	private boolean isIndexSystem = false;
 	private boolean isIndexDotPrefix = false;
 	private boolean isIndexFirstLetter = true;
+	private boolean isIndexAllType = false;
 
 	private final HashSet<String> blackList = new HashSet<String>();
 	
@@ -38,6 +40,7 @@ final class IndexLoader {
 		isIndexSystem = prefs.getBoolean("index_system", false);
 		isIndexDotPrefix = prefs.getBoolean("index_dotprefix", false);
 		isIndexFirstLetter = prefs.getBoolean("index_firstletter", true);
+		isIndexAllType = prefs.getBoolean("index_alltype", false);
 		getBlacklist();
 	}
 	
@@ -210,6 +213,7 @@ final class IndexLoader {
 	private boolean isQualifiedFile(File file) {
 		if (!isIndexDotPrefix && file.getName().startsWith(".")) return false;
 		if (!isIndexHidden && file.isHidden()) return false;
+		if (!isIndexAllType && FileInfo.mimeType(file.getName()).equals("*.*")) return false;
 		return true;
 	}
 	
