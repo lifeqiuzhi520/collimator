@@ -123,5 +123,12 @@
 			android:summaryOff="索引時忽略具有隱藏屬性的文件(夾)"
 			android:defaultValue="false"
 		/>
+		<CheckBoxPreference
+            android:key="index_alltype"
+            android:title="索引全部文件類型"
+            android:summaryOn="索引已知及未知文件類型"
+            android:summaryOff="僅索引已知文件類型"
+            android:defaultValue="false"
+        />
 	</PreferenceCategory>
 </PreferenceScreen>

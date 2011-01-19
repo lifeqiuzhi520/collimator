@@ -123,5 +123,12 @@
             android:summaryOff="Ignore hidden files"
             android:defaultValue="false"
         />
+        <CheckBoxPreference
+            android:key="index_alltype"
+            android:title="Index all file types"
+            android:summaryOn="Index known and unknown file types"
+            android:summaryOff="Index known file types only"
+            android:defaultValue="false"
+        />
 	</PreferenceCategory>
 </PreferenceScreen>
