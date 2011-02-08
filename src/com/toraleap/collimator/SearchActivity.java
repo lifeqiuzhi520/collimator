@@ -60,7 +60,7 @@ import com.toraleap.collimator.util.SoftCache;
 /**
  * Collimator 主活动，负责搜索处理，结果显示等操作。
  * @author		uestc.Mobius <mobius@toraleap.com>
- * @version	2010.1109
+ * @version	2011.0208
  */
 public class SearchActivity extends Activity implements OnClickListener, OnItemLongClickListener, OnItemSelectedListener, OnItemClickListener {
 
@@ -251,6 +251,7 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
 	private void updatePreferences() {
 		SharedPreferences prefs = mPreferences;
 		try {
+			Index.init(getApplicationContext(), mEventHandler);
 			Matcher.init(prefs, mEventHandler);
 	       	FileInfo.init(prefs, getApplicationContext());
 	       	isTapView = prefs.getBoolean("operation_tap", true);
