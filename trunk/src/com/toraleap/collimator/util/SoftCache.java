@@ -29,7 +29,6 @@ public abstract class SoftCache<K, V> {
     private final Thread thread = new Thread() {
 		public void run() {
 			K key;
-			Log.e("SoftCache", "Thread started.");
 			while (true) {
 				try {
 					key = queue.take();

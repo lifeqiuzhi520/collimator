@@ -91,11 +91,9 @@ public final class MatchAdapter extends BaseAdapter {//implements SectionIndexer
 		ViewHolder holder;
 		int viewid = position == mSelected ? LAYOUT_SELECTED[mLayout] : LAYOUT_DEFAULT[mLayout]; 
 		if (convertView != null && ((ViewHolder)convertView.getTag()).viewId == viewid) {
-			Log.v("retrieveView", String.valueOf(position));
 			view = convertView;
 			holder = (ViewHolder)view.getTag();
 		} else {
-			Log.v("inflateView", String.valueOf(position));
 			view = mInflater.inflate(viewid, parent, false);
 			holder = new ViewHolder(view, viewid);
 			view.setTag(holder);

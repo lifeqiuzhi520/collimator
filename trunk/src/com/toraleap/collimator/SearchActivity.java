@@ -23,6 +23,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.graphics.Rect;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -107,6 +108,7 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
 	private static final int[] ICON_RESULT = {R.drawable.menu_result, R.drawable.menu_sort, R.drawable.menu_shortcut, R.drawable.menu_playlist, R.drawable.menu_delete};
 	private static final int[] ICON_PICK = {R.drawable.menu_result, R.drawable.menu_sort};
 	private static final int[] ICON_RESULT_AMOUNT = {R.drawable.button_star_empty, R.drawable.button_star_half, R.drawable.button_star_full};
+	private static final int[] STRING_PICK_TOAST = {R.string.status_pick_file, R.string.status_pick_image, R.string.status_pick_audio, R.string.status_pick_video, R.string.status_pick_file, R.string.status_pick_file, R.string.status_pick_file};
 
 	SharedPreferences mPreferences;
 	NotificationManager mNotificationManager;
@@ -197,11 +199,13 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
        	mListEntries.setOnItemLongClickListener(this);
        	mTextStatus = (TextView)findViewById(R.id.TextStatus);
        	mTextStatus.setOnClickListener(this);
-       	if (Intent.ACTION_VIEW.equals(intent.getAction()) && SEARCH_SCHEME.equalsIgnoreCase(intent.getData().getScheme())) {
+       	
+       	String action = intent.getAction();
+       	if (Intent.ACTION_VIEW.equals(action) && SEARCH_SCHEME.equalsIgnoreCase(intent.getData().getScheme())) {
        		mExpression = new Expression(getApplicationContext(), intent.getData().getFragment());
            	getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
        		updateUI();
-       	} else if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+       	} else if (Intent.ACTION_SEARCH.equals(action)) {
        		Log.e("extras", intent.getStringExtra(SearchManager.USER_QUERY));
        		mExpression = new Expression(getApplicationContext());
        		String query = intent.getStringExtra(SearchManager.QUERY);
@@ -211,34 +215,28 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
        		mExpression.setKey(query);
            	getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
        		updateUI();
-       	} else if (Intent.ACTION_PICK.equals(intent.getAction()) || Intent.ACTION_GET_CONTENT.equals(intent.getAction())) {
-       		isPickMode = true;
-       		mExpression = new Expression(getApplicationContext());
+       	} else if (Intent.ACTION_PICK.equals(action) || Intent.ACTION_GET_CONTENT.equals(action)) {
        		String type = intent.getType();
-       		Log.e("type",type);
        		if (type == null) {
-       			Toast.makeText(this, R.string.status_pick_file, Toast.LENGTH_LONG).show();
+       			enterPickMode(0, false);
        		} else if (type.startsWith("image/")) {
-       			mExpression.setRange(1);
        			// 由于系统 GMail 软件的一个 BUG，添加附件时，发送的是 image/* 类型请求，因此为了兼容，不能锁定范围，只能默认到图片选择。
-       			// isRangeLocked = true;
-       			Toast.makeText(this, R.string.status_pick_image, Toast.LENGTH_LONG).show();
+       			enterPickMode(1, false);
        		} else if (type.startsWith("audio/")) {
-       			mExpression.setRange(2);
-       			isRangeLocked = true;
-       			Toast.makeText(this, R.string.status_pick_audio, Toast.LENGTH_LONG).show();
+       			enterPickMode(2, true);
        		} else if (type.startsWith("video/")) {
-       			mExpression.setRange(3);
-       			isRangeLocked = true;
-       			Toast.makeText(this, R.string.status_pick_video, Toast.LENGTH_LONG).show();
+       			enterPickMode(3, true);
        		} else {
-       			Toast.makeText(this, R.string.status_pick_file, Toast.LENGTH_LONG).show();
+       			enterPickMode(0, false);
        		}
        		updateUI();
+       	} else if (RingtoneManager.ACTION_RINGTONE_PICKER.equals(action)) {
+   			enterPickMode(2, true);
        	} else {
-       		Log.e("else", intent.getAction());
+       		Log.e("else", action);
        		mExpression = new Expression(getApplicationContext());
        	}
+       	
        	mEditSearch.addTextChangedListener(new TextWatcher() {
 			public void afterTextChanged(Editable arg0) { }
 			public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
@@ -644,6 +642,7 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
 			if (isPickMode) {
 				Intent intent = new Intent();
 				intent.setData(Uri.fromFile(new File(mSelectedMatch.path(), mSelectedMatch.name())));
+				intent.putExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI, Uri.fromFile(new File(mSelectedMatch.path(), mSelectedMatch.name())));
 				this.setResult(RESULT_OK, intent);
 				finish();
 			} else {
@@ -711,6 +710,14 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
 		mNotificationManager.notify(0, mReloadNotification);
 		Matcher.stopAsyncMatch();
         Index.reloadEntriesAsync();
+	}
+	
+	private void enterPickMode(int type, boolean lock) {
+		isPickMode = true;
+   		mExpression = new Expression(getApplicationContext());
+		mExpression.setRange(type);
+		isRangeLocked = lock;
+		Toast.makeText(this, STRING_PICK_TOAST[type], Toast.LENGTH_LONG).show();
 	}
 	
 	private void setLayout(int layout) {

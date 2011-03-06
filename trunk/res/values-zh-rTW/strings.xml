@@ -13,10 +13,10 @@
 	<string name="status_match_nodata">索引未初始化或為空。</string>
 	<string name="status_match_start">正在為您搜索，請等待...</string>
 	<string name="status_match_syntax_error">等待完整的輸入表達式...</string>
-	<string name="status_result_format">搜索完成，找到 %d 個對象，耗時 %s。</string>
+	<string name="status_result_format">搜索完成，找到 %1$d 個對象，耗時 %2$s。</string>
 	<string name="status_reload_message">正在刷新文件索引，請稍候...</string>
 	<string name="status_reload_start">正在建立索引...</string>
-	<string name="status_reload_result_format">索引創建於 %s，%d 項。</string>
+	<string name="status_reload_result_format">索引創建於 %1$s，%2$d 項。</string>
 	<string name="status_reload_failed">建立索引失敗。</string>
 	<string name="status_serializing_failed">保存索引到SD卡失敗。</string>
 	<string name="status_deserializing_failed">索引未初始化或出錯，請手動刷新。</string>
@@ -40,11 +40,11 @@
 	<string name="util_digest_loading">正在獲取摘要...</string>
 	<string name="util_digest_charset">BIG5</string>
 	<string name="util_digest_nulldata">未知</string>
-	<string name="util_digest_audio_format"><![CDATA[標題: %s<br>藝術家: %s<br>專輯: %s<br>長度: %s]]></string>
-	<string name="util_digest_video_format"><![CDATA[視頻尺寸: %s x %s<br>視頻長度: %s]]></string>
-	<string name="util_digest_image_format"><![CDATA[尺寸: %s x %s<br>相機型號: %s<br>拍攝時間: %s]]></string>
-	<string name="util_digest_archive_format"><![CDATA[總計文件: %s 個<br>解包大小: %s%s]]></string>
-	<string name="util_digest_apk_format"><![CDATA[名稱: %s<br>版本: %s<br>全名: %s]]></string>
+	<string name="util_digest_audio_format"><![CDATA[標題: %1$s<br>藝術家: %2$s<br>專輯: %3$s<br>長度: %4$s]]></string>
+	<string name="util_digest_video_format"><![CDATA[視頻尺寸: %1$s x %2$s<br>視頻長度: %3$s]]></string>
+	<string name="util_digest_image_format"><![CDATA[尺寸: %1$s x %2$s<br>相機型號: %3$s<br>拍攝時間: %4$s]]></string>
+	<string name="util_digest_archive_format"><![CDATA[總計文件: %1$s 個<br>解包大小: %2$s%3$s]]></string>
+	<string name="util_digest_apk_format"><![CDATA[名稱: %1$s<br>版本: %2$s<br>全名: %3$s]]></string>
 	
 	<string name="menu_result">搜索結果</string>
 	<string name="menu_range">搜索範圍</string>
@@ -69,8 +69,8 @@
 	<string name="dialog_pick_title">文件選取模式</string>
 	
 	<string name="dialog_statistics_title">結果統計</string>
-	<string name="dialog_statistics_message_format">文件總數: %d\n佔用空間: %s\n文件來源: %d 個文件夾\n\n%s</string>
-	<string name="dialog_statistics_index_details">索引條目共 %d 項，更新於 %s。</string>
+	<string name="dialog_statistics_message_format">文件總數: %1$d\n佔用空間: %2$s\n文件來源: %3$d 個文件夾\n\n%4$s</string>
+	<string name="dialog_statistics_index_details">索引條目共 %1$d 項，更新於 %2$s。</string>
 	<string name="dialog_statistics_index_none">尚未建立索引或讀取失敗。</string>
 	
 	<string name="dialog_result_delete_title">批量刪除文件確認</string>
@@ -82,7 +82,7 @@
 	<string name="dialog_playlist_title">創建播放列表</string>
 	<string name="dialog_playlist_message">輸入要創建的播放列表名稱。若同名播放列表已存在，將會替換原有列表。留空將創建缺省播放列表。</string>
 	<string name="dialog_playlist_default">缺省列表。</string>
-	<string name="dialog_playlist_inserted_format">%d 個條目已加入到"%s"</string>
+	<string name="dialog_playlist_inserted_format">%1$d 個條目已加入到"%2$s"</string>
 	
 	<string name="dialog_shortcut_title">桌面快捷方式</string>
 	<string name="dialog_shortcut_message">請輸入桌面快捷方式的名稱。</string>
