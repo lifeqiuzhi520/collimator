@@ -82,7 +82,6 @@ public class ThumbnailUtil extends SoftCache<String, Bitmap> {
 	private Bitmap fromFile(String filename) {
 		Bitmap thumbnail = null;
 		if (isDisplayThumbnail) {
-			Log.d("getThumbnail", filename);
 			String mimeType = FileInfo.mimeType(filename);
 			if (mimeType.startsWith("image/")) {
 				thumbnail = loadFromImage(filename);

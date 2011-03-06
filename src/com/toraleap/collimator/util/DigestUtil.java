@@ -81,7 +81,6 @@ public class DigestUtil extends SoftCache<String, Spanned> {
 	private Spanned fromFile(String filename) {
 		Spanned digest = null;
 		if (isDisplayDigest) {
-			Log.d("getDigest", filename);
 			String mimeType = FileInfo.mimeType(filename);
 			if (mimeType.startsWith("image/")) {
 				digest = loadFromImage(filename);

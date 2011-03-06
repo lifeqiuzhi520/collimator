@@ -13,10 +13,10 @@
     <string name="status_match_nodata">Uninitilized index or empty.</string>
     <string name="status_match_start">Searching...</string>
     <string name="status_match_syntax_error">Continue entering...</string>
-    <string name="status_result_format">Completed. %d file(s) found, %s cost.</string>
+    <string name="status_result_format">Completed. %1$d file(s) found, %2$s cost.</string>
     <string name="status_reload_message">Reloading index, please wait...</string>
     <string name="status_reload_start">Reloading index...</string>
-    <string name="status_reload_result_format">Index created at %s, %d files included.</string>
+    <string name="status_reload_result_format">Index created at %1$s, %2$d files included.</string>
     <string name="status_reload_failed">Failed reloading index.</string>
     <string name="status_serializing_failed">Failed saving index database.</string>
     <string name="status_deserializing_failed">Failed restore index database.</string>
@@ -40,11 +40,11 @@
     <string name="util_digest_loading">Requiring digest...</string>
     <string name="util_digest_charset">UTF-8</string>
     <string name="util_digest_nulldata">unknown</string>
-    <string name="util_digest_audio_format"><![CDATA[Title: %s<br>Artist: %s<br>Album: %s<br>Duration: %s]]></string>
-    <string name="util_digest_video_format"><![CDATA[Size: %s x %s<br>Duration: %s]]></string>
-    <string name="util_digest_image_format"><![CDATA[Size: %s x %s<br>Model: %s<br>Time: %s]]></string>
-    <string name="util_digest_archive_format"><![CDATA[Files: %s<br>Uncompressed size: %s%s]]></string>
-    <string name="util_digest_apk_format"><![CDATA[Name: %s<br>Version: %s<br>Package: %s]]></string>
+    <string name="util_digest_audio_format"><![CDATA[Title: %1$s<br>Artist: %2$s<br>Album: %3$s<br>Duration: %4$s]]></string>
+    <string name="util_digest_video_format"><![CDATA[Size: %1$s x %2$s<br>Duration: %3$s]]></string>
+    <string name="util_digest_image_format"><![CDATA[Size: %1$s x %2$s<br>Model: %3$s<br>Time: %4$s]]></string>
+    <string name="util_digest_archive_format"><![CDATA[Files: %1$s<br>Uncompressed size: %2$s%3$s]]></string>
+    <string name="util_digest_apk_format"><![CDATA[Name: %1$s<br>Version: %2$s<br>Package: %3$s]]></string>
 
     <string name="menu_result">Result</string>
     <string name="menu_range">Range</string>
@@ -68,8 +68,8 @@
     <string name="dialog_result_title">Handle result</string>
 
     <string name="dialog_statistics_title">Statistics</string>
-    <string name="dialog_statistics_message_format">Count: %d\nSpace: %s\nSource: %d folder(s)\n\n%s</string>
-    <string name="dialog_statistics_index_details">Total indexed %d items, reloaded at %s。</string>
+    <string name="dialog_statistics_message_format">Count: %1$d\nSpace: %2$s\nSource: %3$d folder(s)\n\n%4$s</string>
+    <string name="dialog_statistics_index_details">Total indexed %1$d items, reloaded at %2$s。</string>
     <string name="dialog_statistics_index_none">No index database.</string>
 
     <string name="dialog_result_delete_title">Confirm batch delete</string>
@@ -81,7 +81,7 @@
     <string name="dialog_playlist_title">Create playlist</string>
     <string name="dialog_playlist_message">Enter name of the new playlist, or replace the one with the same name. Remaining empty to create the default list.</string>
     <string name="dialog_playlist_default">DefaultList</string>
-    <string name="dialog_playlist_inserted_format">%d items inserted to "%s"</string>
+    <string name="dialog_playlist_inserted_format">%1$d items inserted to "%2$s"</string>
 
     <string name="dialog_shortcut_title">Make shortcut</string>
     <string name="dialog_shortcut_message">Determine the name to display on Home Screen.</string>
