@@ -20,6 +20,7 @@
 </string-array>
 <string-array name="dialog_openas_entries">
     <item>查看</item>
+    <item>定位</item>
     <item>编辑</item>
     <item>打开方式</item>
     <item>发送到</item>

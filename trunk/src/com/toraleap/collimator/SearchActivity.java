@@ -48,6 +48,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+import com.toraleap.collimator.bll.FileScannerService;
 import com.toraleap.collimator.data.Expression;
 import com.toraleap.collimator.data.Index;
 import com.toraleap.collimator.data.Match;
@@ -61,7 +62,7 @@ import com.toraleap.collimator.util.SoftCache;
 /**
  * Collimator 主活动，负责搜索处理，结果显示等操作。
  * @author		uestc.Mobius <mobius@toraleap.com>
- * @version	2011.0208
+ * @version	2011.0515
  */
 public class SearchActivity extends Activity implements OnClickListener, OnItemLongClickListener, OnItemSelectedListener, OnItemClickListener {
 
@@ -81,10 +82,11 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
 	private static final int DIALOG_INDEX_OBSOLETE = 100;
 	private static final int DIALOG_FIRST_LAUNCH = 101;
 	private static final int ITEM_OPEN_VIEW = 0;
-	private static final int ITEM_OPEN_EDIT = 1;
-	private static final int ITEM_OPEN_CHOOSE = 2;
-	private static final int ITEM_OPEN_SEND = 3;
-	private static final int ITEM_OPEN_DELETE = 4;
+	private static final int ITEM_OPEN_LOCATE = 1;
+	private static final int ITEM_OPEN_EDIT = 2;
+	private static final int ITEM_OPEN_CHOOSE = 3;
+	private static final int ITEM_OPEN_SEND = 4;
+	private static final int ITEM_OPEN_DELETE = 5;
 	private static final int ITEM_RESULT_STATICS = 0;
 	private static final int ITEM_RESULT_SORT = 1;
 	private static final int ITEM_RESULT_SHORTCUT = 2;
@@ -140,6 +142,9 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = new Intent();
+        intent.setClass(this, FileScannerService.class);
+        startService(intent);
        	setContentView(R.layout.search_activity);
        	initUtils();
        	initViews();
@@ -329,6 +334,10 @@ public class SearchActivity extends Activity implements OnClickListener, OnItemL
 						case ITEM_OPEN_VIEW:
 							intent.setAction(Intent.ACTION_VIEW);
 							intent.setDataAndType(Uri.fromFile(new File(mSelectedMatch.path(), mSelectedMatch.name())), FileInfo.mimeType(mSelectedMatch.name()));
+							break;
+						case ITEM_OPEN_LOCATE:
+							intent.setAction(Intent.ACTION_VIEW);
+							intent.setDataAndType(Uri.fromFile(new File(mSelectedMatch.path())), "resource/folder");
 							break;
 						case ITEM_OPEN_EDIT:
 							intent.setAction(Intent.ACTION_EDIT);

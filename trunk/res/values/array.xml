@@ -20,6 +20,7 @@
 </string-array>
 <string-array name="dialog_openas_entries">
     <item>View</item>
+    <item>Locate</item>
     <item>Edit</item>
     <item>Open as</item>
     <item>Send</item>
