@@ -164,6 +164,8 @@ public class ThumbnailUtil extends SoftCache<String, Bitmap> {
 			bitmap = null;
         } catch (Exception ex) {
             ex.printStackTrace();
+        } catch (NoSuchMethodError err) {
+        	err.printStackTrace();
         } finally {
             try {
                 retriever.release();
