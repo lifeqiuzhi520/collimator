@@ -160,6 +160,8 @@ public class DigestUtil extends SoftCache<String, Spanned> {
 			digest = Html.fromHtml(mContext.getString(R.string.util_digest_video_format, width, height, durationToString(duration)));
         } catch (Exception ex) {
             ex.printStackTrace();
+        } catch (NoSuchMethodError err) {
+        	err.printStackTrace();
         } finally {
             try {
                 retriever.release();
